@@ -3,8 +3,74 @@
 <head>
     <title>css overflow & media query</title>
     <h2>css overflow & media query</h2>
+    <style>
+        body{
+            padding: 00px 50px 50px 50px;
+        }
+        div{
+            background-color: purple;
+            height: 100px;
+            width: 300px;
+            overflow: auto;
+        }
+        p:hover{
+            color: aquamarine;
+            background-color: black;
+        }
+        h2:hover{
+            background-color: darkgreen;
+        }
+        input:focus{
+            font-style: italic;
+            background-color: palevioletred;
+            color: black;
+        }
+        h3::before{
+            content:"💙";
+        }
+        h3::after{
+            content: "💙";
+        }
+        body{
+            counter-reset: section;
+        }
+        p::before{
+            counter-increment: section;
+            content: "💞"; counter(section)
+        }
+        @media screen and (min-width: 300px)
+        {
+            body{
+                background-color: lightgreen;
+            }
+        }
+        
+    </style>
 </head>
 <body>
-    A mountain is an elevated portion of the Earth's crust, generally with steep sides that show signoficant exposed bedrock. Although definitions vary, a mountain may differ from a plateau in having a limited summit area, and is usually higher than a hill,typically rising at least 300 metres (1,000 feet) above the surrounding land. A few mountains are isolated summits, but most occur in mountains ranges.
+    <div>
+    A mountain is an elevated portion of the Earth's crust, generally with steep sides that show signoficant exposed bedrock. Although definitions vary, a mountain may differ from a plateau in having a pmited summit area, and is usually higher than a hill,typically rising at least 300 metres (1,000 feet) above the surrounding land. A few mountains are isolated summits, but most occur in mountains ranges.</div>
+
+    <h3>Types of mountain Formation</h3>
+    <ul>
+        <p>Volcanic mountains</p>
+        <p>Fold Mountains</p>
+        <p>Block Mountains</p>
+        <p>Residual Mountains</p>
+        <p>Dome Mountains</p>
+        <p>Flood Mountains</p>
+    </ul>
+    <input name="types of mountain" type="text">
+    <br>
+    <input name="defintion" type="text">
+    <h2>CSS3 Introduced Media Queries</h2>
+    <p>Media queries in CSS3 extended the CSS2 media types idea: Instead of looking for a type of device, they look at the capability of the device.</p>
+    <p>Media queriescan be used to check many things, <br>such as;</p>
+    <ul>
+        <li>width and height of the viewport</li>
+        <li>width & height of the device</li>
+        <li>orientation (is the tablet/phone in landscape or portrait mode?)</li>
+        <li>resolution</li>
+    </ul>
 </body>
 </html>
